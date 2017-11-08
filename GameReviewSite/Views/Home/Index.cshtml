@@ -3,15 +3,29 @@
 }
 
 <div class="container">
-    <h3>Quick Link to Game List</h3>
+    <div class="row">
+        <h3>Quick Link to Game List</h3>
 
-    <div class="col-lg-12">
-        <p>Go Here Now:</p>
-        <div>
-            <ul style="list-style: none;">
-                <li><a asp-area="" asp-controller="Game" asp-action="Index">Index List</a></li>
-                <li><a asp-area="" asp-controller="Game" asp-action="Create">Add Game</a></li>
-            </ul>
+        <div class="col col-lg-12 col-sm-6">
+            <p>Go Here Now:</p>
+            <div>
+                <ul style="list-style: none;">
+                    <li><a asp-area="" asp-controller="Game" asp-action="Index">Index List</a></li>
+                    <li><a asp-area="" asp-controller="Game" asp-action="Create">Add Game</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col col-lg-12 col-sm-6">
+            @model List<GameReviewSite.Models.GameModel>
+            <h3>See Recent Games Added:</h3>
+            @*<ul>
+                @foreach (var GameModel in Model)
+                {
+                    <li>@GameModel.Game_Title</li>
+                }
+            </ul>*@
+
         </div>
     </div>
 </div>
